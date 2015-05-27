@@ -10,7 +10,7 @@ We used Windows 7 64bit with SolidWorks 2012 64bit as sugested in plugin page.
 Joint Limits
 ------------
 
-You need to add joint limits for `roslaunch display.launch` and safety\_controller for moveit\_plugin
+You need to add joint limits for `roslaunch pumpkin_description display.launch` and safety\_controller for moveit\_plugin
 
     <limit
         effort="30"
@@ -23,4 +23,4 @@ You need to add joint limits for `roslaunch display.launch` and safety\_controll
         soft_lower_limit="-1.9"
         soft_upper_limit="1.9" />
 
-
+To remove `[ WARN]: The root link map has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.` when launch moveit just remove link map inertia tag
