@@ -6,3 +6,21 @@ This repository contains all SolidWorks part files and one assembly file (pumpki
 The folder pumpkin_description already have one working URDF and ROS files ready to launch.
 
 We used Windows 7 64bit with SolidWorks 2012 64bit as sugested in plugin page.
+
+Joint Limits
+------------
+
+You need to add joint limits for `roslaunch display.launch` and safety\_controller for moveit\_plugin
+
+    <limit
+        effort="30"
+        velocity="1.0"
+        lower="-2"
+        upper="2" />
+    <safety_controller
+        k_velocity="10"
+        k_position="15"
+        soft_lower_limit="-1.9"
+        soft_upper_limit="1.9" />
+
+
